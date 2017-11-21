@@ -1,0 +1,15 @@
+{
+  "name": "@ineedthis/express",
+  "version": "0.0.1",
+  "description": "ineedthis service wrapper for the express HTTP server",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "killable": "1.0.0"
+  },
+  "peerDependencies": {
+    "ineedthis": ">=0.0.1"
+  }
+}

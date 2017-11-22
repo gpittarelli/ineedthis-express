@@ -10,6 +10,7 @@
     "killable": "1.0.0"
   },
   "peerDependencies": {
-    "ineedthis": ">=0.0.1"
+    "ineedthis": ">=0.0.1",
+    "express": ">=0.0.1"
   }
 }

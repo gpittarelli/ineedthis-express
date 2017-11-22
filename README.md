@@ -13,7 +13,9 @@ import {createExpressService} from '@ineedthis/express';
 const mySys = createExpressService('@myorg/webserver', {
   port: 3000,
 
-  setup(server) {
+  dependencies: [ /*  */ ],
+
+  setup(server, deps) {
     server.get('/', (req, res) => res.send('Hello, World!'));
   }
 });

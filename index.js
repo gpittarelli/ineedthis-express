@@ -7,7 +7,7 @@ module.exports = function createExpressService(name, opts) {
     dependencies: opts.dependencies || [],
 
     start: function () {
-      return fucntion (deps) {
+      return function (deps) {
         var server = express();
         opts.setup(server, deps);
         return killable(server);

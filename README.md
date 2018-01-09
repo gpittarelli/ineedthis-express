@@ -1,5 +1,5 @@
 # @ineedthis/express
-[![npm version](https://badge.fury.io/js/ineedthis.svg)](https://badge.fury.io/js/ineedthis)
+[![npm version](https://badge.fury.io/js/%40ineedthis%2Fexpress.svg)](https://badge.fury.io/js/%40ineedthis%2Fexpress)
 
 Implements an [ineedthis](https://github.com/gpittarelli/ineedthis)
 service for [express](https://expressjs.com/).

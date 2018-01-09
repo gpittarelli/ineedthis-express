@@ -6,6 +6,10 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gpittarelli/ineedthis-express.git"
+  },
   "dependencies": {
     "killable": "1.0.0"
   },

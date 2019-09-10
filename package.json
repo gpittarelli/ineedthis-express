@@ -1,6 +1,6 @@
 {
   "name": "@ineedthis/express",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "ineedthis service wrapper for the express HTTP server",
   "main": "index.js",
   "keywords": [],

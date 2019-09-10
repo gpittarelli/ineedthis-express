@@ -36,3 +36,5 @@ module.exports = function createExpressService(name, opts) {
     }
   })
 };
+
+module.exports.__ineedthis__isCreateService = true;

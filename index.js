@@ -15,13 +15,14 @@ module.exports = function createExpressService(name, opts) {
 
     start: function () {
       return function (deps) {
-        var server = express();
-        opts.setup(server, deps);
+        var app = express();
+        opts.setup(app, deps);
 
-        return new Promise(function (resolve) {
-          server.listen(getPort(opts, deps), function () {
+        return new Promise(function (resolve, reject) {
+          var server = app.listen(getPort(opts, deps), function () {
             resolve(killable(server));
           });
+          server.on('error', reject);
         });
       };
     },

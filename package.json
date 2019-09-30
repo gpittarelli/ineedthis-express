@@ -9,6 +9,9 @@
     "test": "node ./test.js"
   },
   "keywords": [],
+  "files": [
+    "lib"
+  ],
   "author": "George Pittarelli <g@gjp.cc>",
   "license": "MIT",
   "repository": {

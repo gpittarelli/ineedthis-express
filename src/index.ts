@@ -4,15 +4,23 @@ import express from 'express';
 
 type ExpressServiceOptions = {
   setup: (server: any, deps: any) => never;
-  port?: (deps: any) => (number | string) | number;
+  port?: number | string | ((deps: any) => number | string);
   dependencies: ServiceName[];
 };
 
 function getPort(opts: ExpressServiceOptions, deps: any): number {
-  if (typeof opts.port === 'function') {
-    return opts.port(deps);
+  let port = opts.port;
+  if (typeof port === 'function') {
+    port = port(deps);
   }
-  return opts.port || 3000;
+  if (typeof port === 'string') {
+    port = parseInt(port, 10);
+  }
+  if (typeof port !== 'number') {
+    return 3000;
+  }
+
+  return port;
 }
 
 module.exports = function createExpressService(

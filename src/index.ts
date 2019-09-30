@@ -34,10 +34,10 @@ export default function createExpressService(
     dependencies: opts.dependencies || [],
 
     start: () => (deps: any) => {
-      const app = express();
-      opts.setup(app, deps);
-
       return new Promise(function(resolve, reject) {
+        const app = express();
+        opts.setup(app, deps);
+
         const server = app.listen(getPort(opts, deps), () => {
           resolve(killable(server));
         });

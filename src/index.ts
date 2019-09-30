@@ -23,7 +23,7 @@ function getPort(opts: ExpressServiceOptions, deps: any): number {
   return port;
 }
 
-module.exports = function createExpressService(
+export default function createExpressService(
   name: ServiceName,
   opts: ExpressServiceOptions
 ) {
@@ -55,6 +55,6 @@ module.exports = function createExpressService(
       });
     }
   });
-};
+}
 
-module.exports.__ineedthis__isCreateService = true;
+createExpressService.__ineedthis__isCreateService = true;

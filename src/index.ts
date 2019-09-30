@@ -33,25 +33,21 @@ export default function createExpressService(
   >(name, {
     dependencies: opts.dependencies || [],
 
-    start: function() {
-      return function(deps: any) {
-        var app = express();
-        opts.setup(app, deps);
+    start: () => (deps: any) => {
+      const app = express();
+      opts.setup(app, deps);
 
-        return new Promise(function(resolve, reject) {
-          var server = app.listen(getPort(opts, deps), function() {
-            resolve(killable(server));
-          });
-          server.on('error', reject);
+      return new Promise(function(resolve, reject) {
+        const server = app.listen(getPort(opts, deps), () => {
+          resolve(killable(server));
         });
-      };
+        server.on('error', reject);
+      });
     },
 
-    stop: function(server: KillableServer) {
-      return new Promise(function(resolve) {
-        server.kill(function() {
-          resolve();
-        });
+    stop(server: KillableServer) {
+      return new Promise(resolve => {
+        server.kill(() => resolve());
       });
     }
   });

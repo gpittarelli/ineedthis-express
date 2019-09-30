@@ -53,4 +53,7 @@ export default function createExpressService(
   });
 }
 
+// TODO: Use a special symbol when ineedthis exports one
+// until then:
+//eslint-disable-next-line @typescript-eslint/camelcase
 createExpressService.__ineedthis__isCreateService = true;

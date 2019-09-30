@@ -2,9 +2,12 @@
   "name": "@ineedthis/express",
   "version": "0.0.5",
   "description": "ineedthis service wrapper for the express HTTP server",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
   "keywords": [],
-  "author": "",
+  "author": "George Pittarelli <g@gjp.cc>",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -16,5 +19,11 @@
   "peerDependencies": {
     "ineedthis": ">=0.0.1",
     "express": ">=0.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "@types/node": "^12.7.8",
+    "ineedthis": "0.0.25",
+    "typescript": "3.6.3"
   }
 }
